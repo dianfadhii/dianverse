@@ -33,4 +33,4 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/datamaahasiswa', [mahasiswaController::class, "index"]) 
+Route::get('/datamaahasiswa', [mahasiswaController::class, "index"]);
