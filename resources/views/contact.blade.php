@@ -1,42 +1,32 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
-@section('title', 'Contact')
+@section('title', 'Contact | LARAVETI')
 
 @section('content')
-  <div class="container page contact-page">
-    <h2>Contact Us</h2>
-    <p>Silakan isi formulir di bawah untuk menghubungi kami:</p>
+<div class="text-center mb-5">
+    <h1 class="fw-bold text-primary">Hubungi Kami</h1>
+    <p class="text-muted">Silakan isi form berikut untuk mengirim pesan kepada tim kami.</p>
+</div>
 
-    @if(session('success'))
-      <div class="alert success">
-        {{ session('success') }}
-      </div>
-    @endif
-
-    <form action="{{ url('/contact/send') }}" method="POST" class="contact-form">
-      @csrf
-      <div class="form-group">
-        <label for="name">Nama</label>
-        <input type="text" name="name" id="name" placeholder="Nama Anda" value="{{ old('name') }}" required>
-        @error('name')
-          <span class="error">{{ $message }}</span>
-        @enderror
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" placeholder="Email Anda" value="{{ old('email') }}" required>
-        @error('email')
-          <span class="error">{{ $message }}</span>
-        @enderror
-      </div>
-      <div class="form-group">
-        <label for="message">Pesan</label>
-        <textarea name="message" id="message" rows="5" placeholder="Tulis pesan Anda..." required>{{ old('message') }}</textarea>
-        @error('message')
-          <span class="error">{{ $message }}</span>
-        @enderror
-      </div>
-      <button type="submit" class="btn-send">Kirim</button>
-    </form>
-  </div>
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card p-4 shadow-sm">
+            <form>
+                <div class="mb-3">
+                    <label for="nama" class="form-label fw-bold">Nama Lengkap</label>
+                    <input type="text" class="form-control" id="nama" placeholder="Masukkan nama Anda">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label fw-bold">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Masukkan email Anda">
+                </div>
+                <div class="mb-3">
+                    <label for="pesan" class="form-label fw-bold">Pesan</label>
+                    <textarea class="form-control" id="pesan" rows="4" placeholder="Tulis pesan Anda"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Kirim Pesan</button>
+            </form>
+        </div>
+    </div>
+</div>
 @endsection

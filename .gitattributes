@@ -9,3 +9,4 @@ CHANGELOG.md export-ignore
 .styleci.yml export-ignore
 *.zip filter=lfs diff=lfs merge=lfs -text
 *.mp4 filter=lfs diff=lfs merge=lfs -text
+java/oracleJdk-25/lib/modules filter=lfs diff=lfs merge=lfs -text

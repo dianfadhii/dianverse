@@ -1,36 +1,55 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
+| File ini berisi definisi route utama untuk website LARAVETI.
+| Setiap route diarahkan ke controller yang sesuai untuk
+| mengatur tampilan dan logika halaman.
 |
 */
 
-Route::get('/home', function () {
-    return view('home');
-});
+// =====================
+// 🏠 HALAMAN UTAMA (HOME)
+// =====================
 
-Route::get('/profile', function () {
-    return view('profile');
-});
+// URL: / (Halaman Welcome/Landing)
+Route::get('/', [HomeController::class, 'index'])->name('welcome');
 
-Route::get('/berita', function () {
-    return view('berita');
-});
+// URL: /home (Halaman Dashboard Utama)
+Route::get('/home', [HomeController::class, 'home'])->name('home');
 
-Route::get('/contact', function () {
-    return view('contact');
-});
+// =====================
+// 🎓 DATA MAHASISWA
+// =====================
 
-Route::get('/welcome', function () {
-    return view('welcome');
-});
+// URL: /mahasiswa
+Route::get('/mahasiswa', [MahasiswaController::class, 'index'])->name('mahasiswa.index');
 
-Route::get('/datamaahasiswa', [mahasiswaController::class, "index"]);
+// =====================
+// 📰 BERITA
+// =====================
+
+// URL: /berita (Daftar Berita)
+Route::get('/berita', [BeritaController::class, 'index'])->name('berita.index');
+
+// URL: /berita/{slug} (Detail Berita)
+Route::get('/berita/{slug}', [BeritaController::class, 'show'])->name('berita.show');
+
+// =====================
+// 👤 PROFIL & KONTAK
+// =====================
+
+// URL: /profile
+Route::get('/profile', [ProfileController::class, 'show'])->name('profile');
+
+// URL: /contact
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');

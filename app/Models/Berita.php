@@ -10,13 +10,19 @@ class Berita
             "judul" => "Berita Pertama",
             "slug" => "berita-pertama",
             "penulis" => "Dian Fadhilah",
-            "isi" => "Ini adalah isi dari berita pertama."
+            "isi" => "Ini adalah isi dari berita pertama. Kegiatan pembukaan acara Veo3: AI Video Challenge 2025 berlangsung meriah dengan partisipasi mahasiswa dari berbagai universitas."
         ],
         [
             "judul" => "Berita Kedua",
             "slug" => "berita-kedua",
             "penulis" => "Rizky Saputra",
-            "isi" => "Ini adalah isi dari berita kedua."
+            "isi" => "Berita kedua membahas tentang perkembangan teknologi informasi di bidang pendidikan. Himpunan Mahasiswa TI aktif mengadakan pelatihan terkait penggunaan AI dalam dunia akademik."
+        ],
+        [
+            "judul" => "Berita Ketiga",
+            "slug" => "berita-ketiga",
+            "penulis" => "Aulia Rahman",
+            "isi" => "Berita ketiga menyoroti keberhasilan mahasiswa dalam ajang kompetisi web development tingkat nasional. Tim dari Universitas Muhammadiyah Semarang berhasil meraih juara 1 berkat inovasi yang dibawakan."
         ]
     ];
 

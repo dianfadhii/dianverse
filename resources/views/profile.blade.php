@@ -1,35 +1,29 @@
+@extends('layouts.main')
 
-
-
-
-
-
-
-
-
-
-
-
-
-@extends('layouts.app')
-
-@section('title', 'Profile')
+@section('title', 'Profile | LARAVETI')
 
 @section('content')
-  <div class="container page profile-page">
-    <h2>Profil Pengguna</h2>
-    <div class="profile-wrapper">
-      <!-- Foto Profil -->
-      <div class="profile-photo">
-        <img src="{{ asset('dian cansss.jpeg') }}" alt="Foto Profil Dian Fadillah">
-      </div>
+<div class="text-center mb-5">
+    <h1 class="fw-bold text-primary">Profil LARAVETI</h1>
+    <p class="lead text-muted">Tentang Kami</p>
+</div>
 
-      <!-- Info Profil -->
-      <div class="profile-info">
-        <p><strong>Nama:</strong> Dian Fadhilah</p>
-        <p><strong>Email:</strong> yanfadhilah31@gmail.com</p>
-        <p><strong>Deskripsi:</strong> Saya seorang pelajar / mahasiswa / web developer pemula. Saya sedang belajar membuat aplikasi web menggunakan Laravel dan mencoba membangun tampilan dinamis ini.</p>
-      </div>
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card p-4 shadow-sm">
+            <h4 class="fw-bold text-primary">Visi</h4>
+            <p>Menjadi sistem informasi akademik modern yang mendukung transparansi dan efisiensi pendidikan berbasis teknologi.</p>
+
+            <h4 class="fw-bold text-primary mt-3">Misi</h4>
+            <ul>
+                <li>Meningkatkan efisiensi pengelolaan data mahasiswa.</li>
+                <li>Memberikan akses informasi yang mudah dan cepat.</li>
+                <li>Mendukung inovasi digital di lingkungan kampus.</li>
+            </ul>
+
+            <h4 class="fw-bold text-primary mt-3">Developer</h4>
+            <p>Dikembangkan oleh Tim Pengembang Teknologi Informasi Universitas Muhammadiyah Semarang.</p>
+        </div>
     </div>
-  </div>
+</div>
 @endsection
